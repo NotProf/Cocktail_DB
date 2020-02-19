@@ -43,7 +43,6 @@ export class AppComponent implements OnInit {
    const name = $('[name = \'checkboxes\']');
    if (this.count < name.length) {
      if (name[this.count].checked !== false && name[this.count].value !== undefined) {
-       console.log(name[this.count].value);
        this.cocktailService.getListByFilter(name[this.count].value).subscribe((res) => {
          this.cocktailList.filters.push({filterName: name[this.count].value, cocktails: res});
          this.spinner.hide();
@@ -53,7 +52,6 @@ export class AppComponent implements OnInit {
        });
      } else {
        this.count++;
-       console.log('recus');
        this.getCocktailByFilter();
      }
    } else {

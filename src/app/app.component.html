@@ -31,7 +31,7 @@
 >
   <div class="row">
     <div class="col-sm-4 col-md-3 col-lg-2">
-      <div class="custom-control custom-checkbox" *ngIf="category.drinks.length > 1">
+      <div class="custom-control custom-checkbox" *ngIf="category.drinks.length > 1" class="mg-top">
         <div *ngFor="let i of category.drinks">
           <mat-checkbox value="{{i.strCategory}}" name="checkboxes" checked="true">
             {{i.strCategory}}</mat-checkbox>
